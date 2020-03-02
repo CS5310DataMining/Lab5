@@ -55,7 +55,7 @@ summary(CreditDf10)
 CreditDfEval10 <- predict(CreditDf10, TestCreditDf)
 CrossTable(TestCreditDf$default, CreditDfEval10,
            prop.chisq = FALSE, prop.c = FALSE, prop.r = FALSE,
-           ddnn = c('Actual', 'Predicted'))
+           dnn = c('Actual', 'Predicted'))
 
 #adding cost input to the model
 cost <- matrix(c(0, 1, 3, 0), nrow = 2)
